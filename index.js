@@ -1,3 +1,5 @@
+let count = 0
+
 function placeUrl(e) {
     let form = document.getElementById('form')
     //let inputSubmit = form[0].querySelector('input[type = "submit"]')
@@ -7,9 +9,27 @@ function placeUrl(e) {
 // grab section2 and add new elements
     let section2 = document.getElementById('section2')
     let memeDiv = document.createElement('div')
-        memeDiv.setAttribute('id', 'memeDiv')
+        memeDiv.setAttribute('id', 'memeDiv' + count)
+        count++
+        memeDiv.setAttribute('class', 'memeDiv')
         section2.appendChild(memeDiv)
+
+// create x button to delete meme, set attributes, append to memeDiv
+    let xButton = document.createElement('input')
+        xButton.setAttribute('type', 'submit')
+        xButton.setAttribute('class', 'xButton')
+        xButton.setAttribute('value', 'X')
+        xButton.setAttribute('onclick', "remove(event)")
+        memeDiv.appendChild(xButton)
     
+// add event listener to xButton && notify user of removal && remove    
+        xButton.addEventListener('click', function (event) {
+            const hasUserConfirmedDelete = confirm('You are about to delete this meme from the page. Click "OK" to proceed.')
+            if (hasUserConfirmedDelete) {
+                section2.removeChild(memeDiv)
+            }
+        })
+
 // create top text divs and h1 for text
     let topTextDiv = document.createElement('div')
         topTextDiv.setAttribute('class', 'topText')
