@@ -1,6 +1,6 @@
 function placeUrl(e) {
     let form = document.getElementById('form')
-    let inputSubmit = form[0].querySelector('input[type = "submit"]')
+    //let inputSubmit = form[0].querySelector('input[type = "submit"]')
     e.preventDefault()
     var formData = new FormData(document.getElementById("form"))
 
@@ -20,7 +20,7 @@ function placeUrl(e) {
         h1Top.innerText = formData.get('topText')
         topTextDiv.appendChild(h1Top)
     
-// create new image tag       
+// create new image      
     let newImage = document.createElement('img')
         newImage.setAttribute('class', 'pic')
         newImage.setAttribute('src', formData.get('url'))
@@ -38,11 +38,6 @@ function placeUrl(e) {
 
     //if x is clicked
     //remove image
-
-    //var imgSrc = document.getElementsByTagName('img')
-    //imgSrc[0].setAttribute('src', 'https://i.redd.it/5m71nu9uv7q31.jpg')
-    
-
 
     form.reset()
 }

@@ -28,6 +28,8 @@ form {
     margin: 5px 0 0 0; 
     padding: 5px 0 5px 10px;
     color: rgb(147, 147, 147);
+    border-radius: 5px;
+    border: 0px;
 }
 
 #button {
@@ -58,7 +60,7 @@ form {
 
 .topText {
     position: absolute;
-    top: 10px;
+    top: 0;
 }
 
 #section2 h1 {
@@ -86,6 +88,33 @@ form {
 
 .btmText {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
 }
 
+@media screen and (min-width: 800px) {
+
+#section1B {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: grey;
+}
+
+#section2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 92%;
+    padding: 20px 0 0 0;
+}
+
+#memeDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    width: 30%;
+}
