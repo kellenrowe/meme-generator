@@ -1,16 +1,15 @@
-let count = 0
+let memeDivCount = 0
 
 function placeUrl(e) {
     let form = document.getElementById('form')
-    //let inputSubmit = form[0].querySelector('input[type = "submit"]')
     e.preventDefault()
     let formData = new FormData(document.getElementById("form"))
 
 // grab section2 and add new elements
     let section2 = document.getElementById('section2')
     let memeDiv = document.createElement('div')
-        memeDiv.setAttribute('id', 'memeDiv' + count)
-        count++
+        memeDivCount++
+        memeDiv.setAttribute('id', 'memeDiv' + memeDivCount)
         memeDiv.setAttribute('class', 'memeDiv')
         section2.appendChild(memeDiv)
 
@@ -23,12 +22,40 @@ function placeUrl(e) {
         memeDiv.appendChild(xButton)
     
 // add event listener to xButton && notify user of removal && remove    
-        xButton.addEventListener('click', function (event) {
-            const hasUserConfirmedDelete = confirm('You are about to delete this bitchin\' meme.\n\nClick "OK" to proceed.')
-            if (hasUserConfirmedDelete) {
-                section2.removeChild(memeDiv)
+    xButton.addEventListener('click', function (event) {
+        const hasUserConfirmedDelete = confirm('You are about to delete this bitchin\' meme.\n\nClick "OK" to proceed.')
+        if (hasUserConfirmedDelete) {
+            section2.removeChild(memeDiv)
+            memeDivCount--
+        }
+        if (memeDivCount < 2) {
+            unsetDisplay.style.display = "none"
+        }
+    })
+
+// create clear all button if more than 1 meme is added
+    const clearAllButton = document.createElement('button')
+    clearAllButton.setAttribute('id', 'clearAllButton')
+    form.appendChild(clearAllButton)
+    clearAllButton.innerHTML = "Clear All"
+
+// create clear all button if more than 1 meme is added 
+    const unsetDisplay = document.querySelector('#clearAllButton')
+    if (memeDivCount > 1) {
+        unsetDisplay.style.display = "unset"
+    } 
+
+    
+    clearAllButton.addEventListener('click', function (event) {
+        const memeDivs = document.getElementsByClassName('memeDiv')
+        const hasUserConfirmedDelete = confirm('You\'re about to delete every bitchin\' meme.\n\nClick "OK" to proceed.')
+        if (hasUserConfirmedDelete) {
+            while (memeDivs.firstChild) {
+                memeDivs.removeChild(memeDivs.firstChild)
             }
-        })
+        }
+    })
+
 
 // create top text divs and h1 for text
     let topTextDiv = document.createElement('div')

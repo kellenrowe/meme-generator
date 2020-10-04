@@ -7,15 +7,19 @@
     <title>Bitchin Memes</title>
     <link rel="stylesheet" href="index.css">
     <script type="text/javascript" src="index.js"></script>
+
+    <!-- Title Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
 </head>
 <body>
+<div id="container">
     <div id="section1">
         <h1>Bitchin' Memes</h1>
         <div id="section1B">
             <form action="" id="form">
 
                 <!-- <label for="url" class="label" >Image URL</label> -->
-                <input type="text" class="input" name="url" placeholder="Image URL" required> <br>
+                <input type="text" id="urlInput" class="input" name="url" placeholder="Image URL"> <br>
 
                 <!-- <label for="topLineText">Text on Top</label> -->
                 <input type="text" class="input" name="topText" placeholder="(Optional) Text For Top"> <br>
@@ -23,12 +27,13 @@
                 <!-- <label for="bottomLineText">Text on Bottom</label> -->
                 <input type="text" class="input" name="bottomText" placeholder="(Optional) Text For Bottom"> <br>
 
-                <input type="submit" value="Make my Meme" id="button" onclick = placeUrl(event)>
+                <button id="button" onclick = placeUrl(event)>Make my Meme</button>
 
             </form>
         </div>
     </div>
     <div id="section2">
     </div>
+</div>
 </body>
 </html>

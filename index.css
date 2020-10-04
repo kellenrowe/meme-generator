@@ -8,20 +8,25 @@
 }
 
 h1 {
-    color: white;
+    color: rgb(255, 107, 107);
+    font-family: 'Ranchers', cursive;
+    letter-spacing: 3px;
 }
 
 #section1B {
     display: flex;
     flex-direction: column;
     width: 80%;
+    height: fit-content;
     background-color: grey;
 }
 
 form {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: 20px 30px;
+    height: fit-content;
 }
 
 .input {
@@ -41,6 +46,21 @@ form {
     -moz-appearance: none;
     appearance: none;
     color: white;
+}
+
+#clearAllButton {
+    position: absolute;
+    display: none;
+    bottom: 0;
+    right: 0;
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 7px;
+    background-color: #bdbdbd;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: black;
 }
 
 #section2 {
@@ -71,6 +91,7 @@ form {
     border: 1px solid white;
     background-color: rgba(48, 48, 48, 0.584);
     color: white;
+    text-align: center;
 }
 
 .topText {
@@ -81,7 +102,7 @@ form {
 #section2 h1 {
     display: unset;
     font-family: impact;
-    font-size: 2.5em;
+    font-size: 1.8em;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: white;
@@ -95,8 +116,8 @@ form {
     -2px 0px 0 #000,
     2px 2px 5px #000;
     -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .pic {
