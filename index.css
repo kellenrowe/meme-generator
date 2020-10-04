@@ -37,6 +37,9 @@ form {
     padding: 5px 15px;
     border-radius: 7px;
     background-color: #4493fb;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     color: white;
 }
 
@@ -91,6 +94,9 @@ form {
     0px -2px 0 #000,
     -2px 0px 0 #000,
     2px 2px 5px #000;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
 }
 
 .pic {

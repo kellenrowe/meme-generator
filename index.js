@@ -4,7 +4,7 @@ function placeUrl(e) {
     let form = document.getElementById('form')
     //let inputSubmit = form[0].querySelector('input[type = "submit"]')
     e.preventDefault()
-    var formData = new FormData(document.getElementById("form"))
+    let formData = new FormData(document.getElementById("form"))
 
 // grab section2 and add new elements
     let section2 = document.getElementById('section2')
@@ -24,7 +24,7 @@ function placeUrl(e) {
     
 // add event listener to xButton && notify user of removal && remove    
         xButton.addEventListener('click', function (event) {
-            const hasUserConfirmedDelete = confirm('You are about to delete this meme from the page. Click "OK" to proceed.')
+            const hasUserConfirmedDelete = confirm('You are about to delete this bitchin\' meme.\n\nClick "OK" to proceed.')
             if (hasUserConfirmedDelete) {
                 section2.removeChild(memeDiv)
             }
