@@ -101,7 +101,7 @@ form {
 
 #section2 h1 {
     display: unset;
-    font-family: impact;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.8em;
     text-transform: uppercase;
     letter-spacing: 1px;
