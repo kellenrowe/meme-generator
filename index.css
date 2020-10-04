@@ -19,6 +19,7 @@ h1 {
     width: 80%;
     height: fit-content;
     background-color: grey;
+    border-radius: 3px;
 }
 
 form {
@@ -32,9 +33,16 @@ form {
 .input {
     margin: 5px 0 0 0; 
     padding: 5px 0 5px 10px;
-    color: rgb(147, 147, 147);
+    color: rgb(44, 44, 44);
     border-radius: 5px;
     border: 0px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.input:focus {
+    outline: none;
 }
 
 #button {
@@ -42,10 +50,25 @@ form {
     padding: 5px 15px;
     border-radius: 7px;
     background-color: #4493fb;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    color: white;
+    transition: ease-in-out .1s;
+}
+
+#button:hover {
+    background-color: #66a7fa;
+}
+
+#button:active{
+    background-color:#4493fb;
+}
+
+button:focus{
+    outline: none;
 }
 
 #clearAllButton {
@@ -56,11 +79,18 @@ form {
     width: fit-content;
     padding: 5px 15px;
     border-radius: 7px;
-    background-color: #bdbdbd;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background-color: #d0d0d0;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     color: black;
+    transition: ease-in-out .1s;
+}
+
+#clearAllButton:hover {
+    background-color: #aeaeae;
 }
 
 #section2 {
@@ -70,7 +100,7 @@ form {
     height: fit-content;
     width: 92%;
     margin: 0 0 0 4%;
-    padding: 20px 0 0 0;
+    padding: 40px 0 0 0;
 }
 
 .memeDiv {
@@ -79,19 +109,29 @@ form {
     align-items: center;
     position: relative;
     text-align: center;
+    padding: 0 0 20px 0;
 }
 
 .xButton {
     position: absolute;
-    top: -7px;
-    right: -7px;
+    top: -27px;
+    right: 0px;
     height: 25px;
     width: 25px;
     border-radius: 50%;
     border: 1px solid white;
-    background-color: rgba(48, 48, 48, 0.584);
+    background-color: rgba(116, 12, 12, 0.584);
     color: white;
     text-align: center;
+    transition: ease-in-out .1s;
+}
+
+.xButton:hover {
+    background-color:rgba(96, 96, 96, 0.584);
+}
+
+.xButton:active {
+    background-color:rgba(48, 48, 48, 0.584);
 }
 
 .topText {
@@ -139,6 +179,10 @@ form {
     background-color: grey;
 }
 
+.input {
+    font-size: 12px;
+}
+
 #section2 {
     display: flex;
     flex-direction: row;
@@ -146,7 +190,7 @@ form {
     align-items: flex-start;
     justify-content: space-around;
     width: 92%;
-    padding: 20px 0 0 0;
+    padding: 35px 0 0 0;
 }
 
 .memeDiv {

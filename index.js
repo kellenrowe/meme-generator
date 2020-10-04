@@ -14,10 +14,10 @@ function placeUrl(e) {
         section2.appendChild(memeDiv)
 
 // create x button to delete meme, set attributes, append to memeDiv
-    let xButton = document.createElement('input')
-        xButton.setAttribute('type', 'submit')
+    let xButton = document.createElement('button')
+        // xButton.setAttribute('type', 'submit')
         xButton.setAttribute('class', 'xButton')
-        xButton.setAttribute('value', 'X')
+        xButton.innerHTML = "X"
         xButton.setAttribute('onclick', "remove(event)")
         memeDiv.appendChild(xButton)
     
@@ -37,7 +37,7 @@ function placeUrl(e) {
     const clearAllButton = document.createElement('button')
     clearAllButton.setAttribute('id', 'clearAllButton')
     form.appendChild(clearAllButton)
-    clearAllButton.innerHTML = "Clear All"
+    clearAllButton.innerHTML = "Delete All"
 
 // create clear all button if more than 1 meme is added 
     const unsetDisplay = document.querySelector('#clearAllButton')
